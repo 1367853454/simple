@@ -6,6 +6,9 @@ spring:
       enabled: always
   profiles:
     active: dev
+  thymeleaf:
+    encoding: UTF-8
+    prefix: classpath:/templates/
 
 server:
   tomcat:
@@ -28,5 +31,6 @@ pagehelper:
 logging:
   level:
     com.major.simple.mapper: debug
+
 
 
