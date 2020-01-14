@@ -1,1 +1,32 @@
+spring:
+  application:
+    name: major-simple
+  output:
+    ansi:
+      enabled: always
+  profiles:
+    active: dev
+
+server:
+  tomcat:
+    uri-encoding: utf-8
+    max-connections: 500
+    min-spare-threads: 25
+    max-threads: 300
+    accept-count: 200
+  port: 8080
+
+mybatis:
+  type-aliases-package: com.major.simple.mapper
+  mapper-locations: classpath:mapping/*.xml
+
+pagehelper:
+  helper-dialect: mysql
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+logging:
+  level:
+    com.major.simple.mapper: debug
+
 
