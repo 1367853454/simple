@@ -9,6 +9,18 @@ spring:
   thymeleaf:
     encoding: UTF-8
     prefix: classpath:/templates/
+  jpa:
+    database: MYSQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy\
+      dialect: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    view:
+      prefix: classpath:/templates/
+      suffix: .html
+      static-path-pattern: /static/**
 
 server:
   tomcat:
