@@ -39,11 +39,14 @@ public class UserService {
      * @param userForm
      */
     @Transactional
-    public void insertIntoUser(UserForm userForm) {
+    public UserVO insertIntoUser(UserForm userForm) {
 
         User user = new User();
         user.setName(userForm.getUserName());
-        userDao.save(user);
+        //userDao.save(user);
+
+        UserVO vo = new UserVO();
+        return vo;
     }
 
     /**
